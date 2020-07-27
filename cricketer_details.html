@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Data Visualisation</title>
+    <!--Add bootstrap,jquery,charts to the head tag-->
+</head>
+<body style="background-color: rgb(176, 233, 230);">
+    <div class="container">
+        
+        <h1>Sachin Tendulakar</h1>
+        <p>This is some text.</p>
+        <!-- <div class="row">
+            <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+            <div class="col-sm-8" style="background-color:lavenderblush;">.col-sm-8</div>
+        </div> -->
+        <div class="row">
+            <div class="col-sm-3">             
+                <div class="card" style="width:100%;background-color: rgb(243, 241, 105);">
+                    <img class="card-img-top" src="sachin.jpg" alt="Card image" style="max-height: 350px;">
+                    <!-- <hr> -->
+                    <div class="card-body">
+                      <!-- <h4 class="card-title">John Doe</h4> -->
+                      <p class="card-text"><strong>Age : </strong>45</p>
+                      <p class="card-text"><strong>Style : </strong>Right hand batsman</p>
+                      <p class="card-text"><strong>Design : </strong>Batsman</p>
+                      <p class="card-text"><strong>Jersey Number : </strong>10</p>
+                      <p class="card-text"><strong>Country : </strong>India</p>
+                      <!-- <a href="#" class="btn btn-primary stretched-link">See Profile</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9" style="background-color:rgb(238, 124, 162);">
+                
+                <!-- <div class="row my-2" style="padding-bottom: 0.2mm;">
+                    <div class="col-sm-6 ">  
+                        <label><b>Current Status</b></label> 
+                    </div>
+                    <div class="col-sm-3">
+                        <p><b>Batting Statistics</b></p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p><b>Records & Awards</b></p>
+                    </div>
+                </div> -->
+                <div class="row" style="padding-top: 2mm;">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-sm navbar-dark">
+                            <a class="navbar-brand" href="#">
+                                <img src="tomato.png" alt="Logo" style="width:40px;">
+                              </a>
+                            <!-- Links -->
+                            <ul class="navbar-nav border border-dark rounded">
+                              <li class="nav-item active" >
+                                <a class="nav-link" href="#" style="background-color: rgb(186, 140, 230);">Test</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#" style="background-color: rgb(214, 135, 31);">1-Day</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#" style="background-color: rgb(77, 243, 55);">T-20</a>
+                              </li>
+                            </ul>
+                            <ul class="navbar-nav navbar-right ml-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="background-color: rgb(207, 224, 47);">
+                                      Select
+                                    </a>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item active" href="#">Link 1</a>
+                                      <a class="dropdown-item" href="#">Link 2</a>
+                                      <a class="dropdown-item" href="#">Link 3</a>
+                                    </div>
+                                  </li>
+                            </ul>
+                          </nav>
+                    </div>                   
+                </div>
+                <div class="row" style="padding-top: 2mm;">
+                    <div class="col-sm-6 ">  
+                        <label><b>Total Current Status</b></label>                       
+                        <div class="card" style="max-height:220px ;">
+                            <div class="card-body">
+                                <canvas id="chLine"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <label><b>Batting Statistics</b></label>
+                        <div class="card" style="max-height:220px ;">
+                            <div class="card-body">
+                                <p class="card-text"><strong>Matches : </strong>200</p>
+                                <p class="card-text"><strong>Innings : </strong>200</p>
+                                <p class="card-text"><strong>Runs : </strong>200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <label><b>Records & Awards</b></label>
+                        <div class="card" style="max-height:220px ;">
+                            <div class="card-body">
+                                <canvas ></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 1mm;">
+                    <!-- <div class="col-sm-6 py-1" >
+                        <label><b>Total Runs</b></label>
+                        
+                        <div>
+                            <div class="card align-items-center d-flex justify-content-center" style="height:200px ;">
+                                <div class="card-body">
+                            
+                                <table class="table table-bordered table-dark" >
+                                    <thead>
+                                        <tr>
+                                            <th>Col</th>
+                                            <th>Col</th>
+                                            <th>Col</th>
+                                        </tr>
+                                    </thead>
+                            
+                                    <tbody>
+                                        <tr>
+                                            <td>Cell 1</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 3</td>
+                                        </tr>
+                            
+                                        <tr>
+                                            <td>Cell 1</td>
+                                            <td>Cell 2</td>
+                                            <td>Cell 3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-sm-6 py-1">
+                        <label><b>Batting Statistics</b></label>
+                        <div class="card"  style="max-height:200px ;min-height: 200px;">
+                            <div class="card-body" style="background-color: azure;">
+                                <canvas id="chDonut3"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 py-1">
+                        <label><b>Batting Statistics</b></label>
+                        <div class="card" style="max-height:220px ;">
+                            <div class="card-body">
+                                <p class="card-text"><strong>Matches : </strong>200</p>
+                                <p class="card-text"><strong>Innings : </strong>200</p>
+                                <p class="card-text"><strong>Runs : </strong>200</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 py-1">
+                        <label><b>Batting Statistics</b></label>
+                        <div class="card" style="max-height:200px ;min-height: 200px;">
+                            <div class="card-body" style="max-height:200px ;min-height: 200px;">
+                                <label class="card-text"><strong>Matches : </strong>200</label><br>
+                                <label class="card-text"><strong>Innings : </strong>200</label><br>
+                                <label class="card-text"><strong>Runs : </strong>200</label><br>
+                                
+                                <label class="card-text"><strong>Innings : </strong>200</label><br>
+                                <label class="card-text"><strong>Runs : </strong>200</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button type="button" class="btn btn-info">Home</button>
+    </div>
+    <script>
+        var colors = ['#007bff','#28a745','#333333','#c3e6cb','#dc3545','#6c757d','#5cb2e4'];
+        var donutOptions = {
+            cutoutPercentage: 10, 
+            legend: {
+                position:'bottom', 
+                padding:5, 
+                labels: {pointStyle:'circle', usePointStyle:true}
+                }
+        };
+        var chDonutData3 = {
+            labels: ['Sixes', 'Fours', 'Ones'],
+            datasets: [
+                {
+                    backgroundColor: colors.slice(0,3),
+                    borderWidth: 0,
+                    data: [21, 45, 55, 33]
+                }
+            ]
+        };
+        var chartData = {
+            labels: ["HS", "Avg", "SR", "50's"],
+            datasets: [{
+                label: 'Overall',
+                data: [256, 45.87, 48.67, 4],
+                backgroundColor: colors[6],
+                borderColor: colors[0],
+            },
+            {
+                label: 'Last 5 matches',
+                data: [108, 31.29, 73.89, 1],
+                borderColor: colors[2],
+            }]
+        };
+
+
+        var chLine = document.getElementById("chLine");
+        if (chLine) {
+        new Chart(chLine, {
+        type: 'line',
+        data: chartData,
+        options: {
+            scales: {
+            yAxes: [{
+                ticks: {
+                beginAtZero: false
+                }
+            }]
+            },
+            legend: {
+            display: true
+            }
+        }
+        });
+        }
+
+
+        var chDonut3 = document.getElementById("chDonut3");
+        if (chDonut3) {
+        new Chart(chDonut3, {
+            type: 'pie',
+            data: chDonutData3,
+            options: donutOptions
+        });
+        }
+    </script>
+    
+</body>
+</html>
